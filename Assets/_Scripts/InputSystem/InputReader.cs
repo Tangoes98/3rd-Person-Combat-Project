@@ -6,6 +6,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 {
     public event Action JumpEvent;
     public event Action DodgeEvent;
+    public event Action AttackEvent;
     public Vector2 MovementValue { get; private set; }
 
     Controls controls;
@@ -53,6 +54,13 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 
     public void OnFreeLook(InputAction.CallbackContext context)
     {
-        
+
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        AttackEvent?.Invoke();
     }
 }

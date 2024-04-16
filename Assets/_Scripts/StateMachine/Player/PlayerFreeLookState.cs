@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class PlayerFreeLookState : PlayerBaseState
 {
-    public readonly int FREE_LOOK_SPEED = Animator.StringToHash("FreeLookSpeed");
+    public readonly int FreeLookSpeedHash = Animator.StringToHash("FreeLookSpeed");
 
     public PlayerFreeLookState(PlayerStateMachine playerStateMachine) : base(playerStateMachine)
     {
-
+        _playerStateMachine.CurrentState = "FREE_LOOK_STATE";
     }
 
     public override void Enter()
     {
-
+        _playerStateMachine.Animator.CrossFadeInFixedTime(FreeLookSpeedHash, .1f);
+        _playerStateMachine.InputReader.AttackEvent += OnAttackEvent;
     }
 
     public override void Exit()
     {
+        _playerStateMachine.InputReader.AttackEvent -= OnAttackEvent;
 
     }
 
@@ -23,22 +25,32 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         Vector3 movement = CalculateMovement();
 
+        Move(movement * _playerStateMachine.FreelookMovementSpeed, deltaTime);
 
-
-        _playerStateMachine.CharacterController.Move(movement * _playerStateMachine.FreelookMovementSpeed * deltaTime);
 
         if (_playerStateMachine.InputReader.MovementValue == Vector2.zero)
         {
             // Unit Movement
-            _playerStateMachine.Animator.SetFloat(FREE_LOOK_SPEED, 0, .1f, deltaTime);
+            _playerStateMachine.Animator.SetFloat(FreeLookSpeedHash, 0, .1f, deltaTime);
             return;
         }
 
-        _playerStateMachine.Animator.SetFloat(FREE_LOOK_SPEED, 1, .1f, deltaTime);
+        _playerStateMachine.Animator.SetFloat(FreeLookSpeedHash, 1, .1f, deltaTime);
 
         FaceDirection(movement);
 
     }
+
+    #region ===========
+
+    void OnAttackEvent()
+    {
+        _playerStateMachine.SwitchState(new PlayerAttackState(_playerStateMachine, 0));
+    }
+
+
+
+
 
     private void FaceDirection(Vector3 movement)
     {
@@ -69,6 +81,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     }
 
+    #endregion
 
 
 
