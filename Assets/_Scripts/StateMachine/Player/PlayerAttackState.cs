@@ -14,6 +14,7 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void Enter()
     {
+        _playerStateMachine.AudioManager.PlayAttackShout(_playerStateMachine.AudioManager.AttackShout, _playerStateMachine.transform.position);
         _playerStateMachine.Animator.CrossFadeInFixedTime(_attack.AnimationName, _attack.TransitionDuration);
     }
 
@@ -38,7 +39,7 @@ public class PlayerAttackState : PlayerBaseState
     {
         var currentStateInfo = _playerStateMachine.Animator.GetCurrentAnimatorStateInfo(0);
 
-        if (!_playerStateMachine.Animator.IsInTransition(0))
+        if (!_playerStateMachine.Animator.IsInTransition(0) && currentStateInfo.IsTag("Attack"))
         {
             return currentStateInfo.normalizedTime;
         }

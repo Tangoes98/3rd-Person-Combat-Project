@@ -12,6 +12,11 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float FreelookRotationSpeed { get; private set; }
     [field: SerializeField] public Attack[] Attakcs { get; private set; }
 
+
+
+
+    [HideInInspector] public AudioManager AudioManager { get; private set; }
+
     [field: SerializeField] public string CurrentState { get; set; }
 
     public Transform MainCameraTransform { get; private set; }
@@ -19,6 +24,7 @@ public class PlayerStateMachine : StateMachine
     void Start()
     {
         MainCameraTransform = Camera.main.transform;
+        AudioManager = AudioManager.Instance;
         SwitchState(new PlayerFreeLookState(this));
     }
 

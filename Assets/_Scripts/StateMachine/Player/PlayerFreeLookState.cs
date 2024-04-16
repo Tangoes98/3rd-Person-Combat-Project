@@ -11,7 +11,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Enter()
     {
-        _playerStateMachine.Animator.CrossFadeInFixedTime(FreeLookSpeedHash, .1f);
+        _playerStateMachine.Animator.CrossFadeInFixedTime("FreeLookBlendTree", .1f);
         _playerStateMachine.InputReader.AttackEvent += OnAttackEvent;
     }
 

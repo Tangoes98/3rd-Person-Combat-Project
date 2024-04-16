@@ -4,9 +4,21 @@ using UnityEngine.InputSystem;
 
 public class InputReader : MonoBehaviour, Controls.IPlayerActions
 {
+    public static InputReader Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("Multiple instances of InputReader");
+        }
+        Instance = this;
+    }
+
     public event Action JumpEvent;
     public event Action DodgeEvent;
     public event Action AttackEvent;
+    public event Action MenuEvent;
     public Vector2 MovementValue { get; private set; }
 
     Controls controls;
@@ -62,5 +74,11 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         if (!context.performed) return;
 
         AttackEvent?.Invoke();
+    }
+
+    public void OnMenu(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        MenuEvent?.Invoke();
     }
 }

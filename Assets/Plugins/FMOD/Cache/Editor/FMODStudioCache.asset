@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7936867243444227865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UI_MenuOpen
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UI_MenuOpen
+  Guid:
+    Data1: 651438356
+    Data2: 1139498130
+    Data3: -784403795
+    Data4: -1639288003
+  Banks:
+  - {fileID: 2383570239257065887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1518
+--- !u!114 &-6767920254643382905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Footstep
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Footstep
+  Guid:
+    Data1: -1591465399
+    Data2: 1107168790
+    Data3: 9107589
+    Data4: -1215942374
+  Banks:
+  - {fileID: 2383570239257065887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 412
+--- !u!114 &-5022842475509410939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BG/BossFightMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BG/BossFightMusic
+  Guid:
+    Data1: 2143832120
+    Data2: 1152977898
+    Data3: 2103408566
+    Data4: 1088437979
+  Banks:
+  - {fileID: 2383570239257065887}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 167146
+--- !u!114 &-1553841478215502384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UI_Selection
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UI_Selection
+  Guid:
+    Data1: 341138192
+    Data2: 1115942640
+    Data3: -425000062
+    Data4: -690518111
+  Banks:
+  - {fileID: 2383570239257065887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 322
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 7501029341563615564}
+  - {fileID: 2383570239257065887}
+  EditorEvents:
+  - {fileID: -6767920254643382905}
+  - {fileID: 9178630270364536923}
+  - {fileID: 8731874720335159254}
+  - {fileID: -5022842475509410939}
+  - {fileID: -1553841478215502384}
+  - {fileID: -7936867243444227865}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 2383570239257065887}
+  StringsBanks:
+  - {fileID: 7501029341563615564}
+  cacheTime: 638488460390334813
+  cacheVersion: 131617
+--- !u!114 &2383570239257065887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FmodProject/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638488460390304885
+  FileSizes:
+  - Name: Desktop
+    Value: 2518112
+  Exists: 1
+--- !u!114 &7501029341563615564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FmodProject/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638488460390334813
+  FileSizes:
+  - Name: Desktop
+    Value: 1032
+  Exists: 1
+--- !u!114 &8731874720335159254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BG/ForestAmbient
+  m_EditorClassIdentifier: 
+  Path: event:/BG/ForestAmbient
+  Guid:
+    Data1: -1518248445
+    Data2: 1302035156
+    Data3: 1168749456
+    Data4: -220742101
+  Banks:
+  - {fileID: 2383570239257065887}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 23866
+--- !u!114 &9178630270364536923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/AttackShout
+  m_EditorClassIdentifier: 
+  Path: event:/Player/AttackShout
+  Guid:
+    Data1: 1046069846
+    Data2: 1097915080
+    Data3: -941650511
+    Data4: 1049024029
+  Banks:
+  - {fileID: 2383570239257065887}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500

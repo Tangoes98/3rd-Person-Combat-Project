@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5142fb59-9aea-4f44-a635-5073f6d28d1a}">
+		<property name="assetPath">
+			<value>ftsp_02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.27364583333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{44eb369e-34cb-4cec-871e-1efa8f551932}</destination>
+		</relationship>
+	</object>
+</objects>
